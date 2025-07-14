@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Charity Foundation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c');
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      font-size: 2.5em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      margin: 0 10px;
+      background-color: #666;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #ff6600;
+    }
+
+    .scrolling-text {
+      background: #222;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .scrolling-text p {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      from { transform: translateX(0%); }
+      to { transform: translateX(-100%); }
+    }
+
+    .slideshow {
+      display: flex;
+      overflow: auto;
+      gap: 15px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .slideshow img {
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    section {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      background-color: #ff6600;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Helping Hands - Charity Foundation</header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#mission">Mission</a>
+    <a href="#services">Services</a>
+    <a href="#donate">Donation</a>
+  </nav>
+
+  <div class="scrolling-text">
+    <p>Together we can make a difference! | Donate Today | Volunteer to help those in need.</p>
+  </div>
+
+  <div class="slideshow">
+    <img src="a6df64139b380317b13dca3148ca9b0f1745347435.jpg" alt="Charity 1">
+    <img src="images333 - Copy.jpg" alt="Charity 2">
+    <img src="UN0149769_4.jpg" alt="Charity 3">
+    <img src="volunteers-collecting-food-donations-medium-shot-1071x675.jpg" alt="Charity 4">
+  </div>
+
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>We are committed to improving lives by providing education, healthcare, and basic needs to the underprivileged. Your support empowers real change.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Food distribution for homeless</li>
+      <li>Free education programs</li>
+      <li>Healthcare camps in rural areas</li>
+      <li>Emergency relief support</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Volunteer With Us</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Why do you want to volunteer?" rows="4" required></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <section id="donate">
+    <h2>Donation Form</h2>
+    <form onsubmit="showThankYou(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="number" placeholder="Donation Amount (INR)" required>
+      <textarea placeholder="Message (optional)" rows="3"></textarea>
+      <input type="submit" value="Donate Now">
+    </form>
+  </section>
+
+  <script>
+    function showThankYou(e) {
+      e.preventDefault();
+      alert("Thank you for your generous donation! ❤");
+    }
+  </script>
+
+</body>
+</html>
